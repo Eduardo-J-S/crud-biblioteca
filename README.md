@@ -55,31 +55,50 @@ Nesta atividade você precisa adicionar a autenticação com oauth do Google e d
    - Acesso ao site: https://developers.facebook.com/apps/?show_reminder=true e clique em 'Criar Aplicativo'
 ![image](https://user-images.githubusercontent.com/276077/166114761-e9b09073-3cee-4c5c-800a-619e694e98c3.png)
 
-
-   - Em seguida, escolha a opção 'Consumidor'
-![image](https://user-images.githubusercontent.com/276077/166114779-922c9385-fb37-425c-af4b-c0382aae707e.png)
-
-
    - Dê um nome para a sua aplicação
 ![image](https://user-images.githubusercontent.com/276077/166114797-7e0b04fb-9476-4eb4-b434-561777f9fa82.png)
 
-   - Na tela de adição de produtos, escolha a opção 'Login do Facebook' (a opção não está sendo exibida na imagem porque o print foi realizado após a escolha)
-![image](https://user-images.githubusercontent.com/276077/166114881-b14ecca7-bf1a-4a0d-b0bf-6fd5f721516c.png)
+   - Em seguida, escolha o caso de uso 'Autenticar e solicitar dados de usuários com o Login do Facebook'
+![image](./images/casos-de-uso.png)
 
-   - Já com o 'Login do Facebook' ativado, escolha a opção 'início rápido' no painel lateral. Clique na opção 'WEB', como indicado na seta.  
-![image](https://user-images.githubusercontent.com/276077/166114898-02ab2f4c-a8ef-4cee-8ad5-d2ce1b19fe5d.png)
+   - Selecione 'Ainda não quero me conectar a um portfólio empresarial.'
+![image](./images/portfolio-empresarial.png)
 
-   - Nela, digite o domínio fictício do seu site. Lembre-se que para isso funcionar, vocẽ precisa ter alterado o arquivo de 'hosts' do seu sistema operacional. Dessa forma, ele encaminhará a requisição para um domínio específico direto para o seu localhost. Adicione o seguinte padrão no campo, onde *dominio_escolhido* é o nome indicado no hostname do seu sistema operacional.
+   - Clique em 'Acessar painel'
+![image](./images/concluir.png)
+
+   - Na tela `Painel` selecione a opção `Adcione e personalize casos de uso` e em seguida clique em `Personalizar a adição de botão de Login do Facebook`
+![image](./images/painel.png)
+
+   - Em `Permissões` ative a opção que possibilita que o aplicativo leia o endereço de email principal de uma pessoa.
+![image](./images/personalizar-permissoes.png)
+
+   - Em `Configurações` adicione a url do redirecionamento. Adicione o seguinte padrão, onde *dominio_definido* é o nome indicado no hostname do seu sistema operacional na etapa 1 da ativididade.
+   ```
+   https://dominio_definido:8000/social-auth/complete/facebook/
+   ```
+   ![image](./images/redirecionamento.png)
+
+   - Em seguida salve as alterações
+![image](./images/salvar-redirecionamento.png)
+
+   - Copie a URL de redirecionamento e verifique se ela é válida para este aplicativo.
+   ![image](./images/verificar-redirecionamento.png)
+
+<!-- - Já com o 'Login do Facebook' ativado, escolha a opção 'início rápido' no painel lateral. Clique na opção 'WEB', como indicado na seta.  
+![image](https://user-images.githubusercontent.com/276077/166114898-02ab2f4c-a8ef-4cee-8ad5-d2ce1b19fe5d.png) -->
+
+<!-- - Nela, digite o domínio fictício do seu site. Lembre-se que para isso funcionar, vocẽ precisa ter alterado o arquivo de 'hosts' do seu sistema operacional. Dessa forma, ele encaminhará a requisição para um domínio específico direto para o seu localhost. Adicione o seguinte padrão no campo, onde *dominio_escolhido* é o nome indicado no hostname do seu sistema operacional.
 
 ```
 https://dominio_escolhido:8000
 ```
 
-![image](https://user-images.githubusercontent.com/276077/166114960-0678afee-bdf3-4dc9-904e-c7e851a20f65.png)
+![image](https://user-images.githubusercontent.com/276077/166114960-0678afee-bdf3-4dc9-904e-c7e851a20f65.png) -->
 
 <!-- ![image](https://user-images.githubusercontent.com/276077/166114998-d8a9a060-1e2a-401d-a050-a06435ba40f1.png) -->
 
-   - Agora clique em configurações, no painel lateral. Em 'Básico' você vai obter o ID da aplicação e o SECRET. Salve essas informações para serem usadas após a etapa de criação do aplicativo no site do facebook. 
+   - Agora clique em configurações, no painel lateral. Em `Básico` você vai obter o ID da aplicação e o SECRET. Salve essas informações para serem usadas após a etapa de criação do aplicativo no site do facebook. 
 
 ![image](https://user-images.githubusercontent.com/276077/166115090-aeff0b29-68c5-4ee0-b5e6-1bfd5cbd6734.png)
 
@@ -95,14 +114,14 @@ https://dominio_escolhido:8000
 
  <!-- ![image](https://user-images.githubusercontent.com/276077/166115472-bb732061-8590-408a-b3bd-f27a6693d2ee.png)  -->
 
-   - Por fim, após copiar as informações, adicione em configuraçõe do 'Login do Facebook' a url do redirecionamento (destaque na imagem). 
+<!-- - Por fim, após copiar as informações, adicione em configuraçõe do 'Login do Facebook' a url do redirecionamento (destaque na imagem). 
 Adicione o seguinte padrão, onde *dominio_definido* é o nome indicado no hostname do seu sistema operacional na etapa 1 da ativididade.
 
 ```
 https://dominio_definido:8000/social-auth/complete/facebook/
 ```
 
-![image](https://user-images.githubusercontent.com/276077/166115567-de99dd91-2024-4b5a-aa7e-cc3a343ddb86.png) 
+![image](https://user-images.githubusercontent.com/276077/166115567-de99dd91-2024-4b5a-aa7e-cc3a343ddb86.png)  -->
 
 Agora no projeto django faça as seguintes adições: 
 
